@@ -10,3 +10,12 @@ commands:
   coords:
     description: Prints Coords To all players
     usage: /<command>
+  enabletp:
+    description: sets tp to true in config.yml
+    usage: /<command>
+  disabletp:
+      description: sets tp to false in config.yml
+      usage: /<command>
+  statustp:
+      description: returns the status of the tp bool
+      usage: /<command>
