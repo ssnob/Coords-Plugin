@@ -1,0 +1,12 @@
+name: Coords
+version: '${project.version}'
+main: ssno.me.Me
+api-version: 1.18
+prefix: Coords
+load: STARTUP
+authors: [ ssno ]
+description: coords
+commands:
+  coords:
+    description: Prints Coords To all players
+    usage: /<command>
