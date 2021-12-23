@@ -56,7 +56,7 @@ public class onPlayerDeath implements Listener {
                     }
                     if(data.equalsIgnoreCase("tp=true")) {
                        return;
-                       // soon to be implmented
+                       // soon
                     }
                 }
                 myReader.close();

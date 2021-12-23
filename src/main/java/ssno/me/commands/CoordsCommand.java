@@ -10,6 +10,7 @@ public class CoordsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        String prefix = "§7[§bCoords§7] ";
         String overworld = "world";
         String nether = "world_nether";
         String end = "world_the_end";
@@ -26,15 +27,15 @@ public class CoordsCommand implements CommandExecutor {
                 String world = player.getPlayer().getWorld().getName();
                 double x = player.getLocation().getX(); double y = player.getLocation().getY(); double z = player.getLocation().getZ();
                 String name = player.getName(); String xc = Double.toString(Math.floor(x)); String yc = Double.toString(Math.floor(y)); String zc = Double.toString(Math.floor(z));
-                Bukkit.broadcastMessage(name + "'s coords"); Bukkit.broadcastMessage("x:" + xc + " y:" + yc + " z:" + zc);
+                Bukkit.broadcastMessage(prefix + name + "'s coords"); Bukkit.broadcastMessage(prefix + "x:" + xc + " y:" + yc + " z:" + zc);
                 if (world.equalsIgnoreCase(overworld)) {
-                    Bukkit.broadcastMessage("World: OverWorld");
+                    Bukkit.broadcastMessage(prefix + "World: OverWorld");
                 }
                 if (world.contains(nether)) {
-                    Bukkit.broadcastMessage("World: Nether");
+                    Bukkit.broadcastMessage(prefix + "World: Nether");
                 }
                 if (world.contains(end)) {
-                    Bukkit.broadcastMessage("World: The End");
+                    Bukkit.broadcastMessage(prefix + "World: The End");
                 }
             }
         }
