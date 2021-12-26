@@ -34,6 +34,7 @@ public class CoordsCommand implements CommandExecutor {
                 if (world.contains(end)) {
                     Bukkit.broadcastMessage(prefix + "World: The End");
                 }
+                
                 Cooldown.setCooldown(player.getPlayer(), 5);
             }
             else {
