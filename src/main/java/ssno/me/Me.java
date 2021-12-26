@@ -1,8 +1,10 @@
 package ssno.me;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 import ssno.me.commands.AdminCommands;
 import ssno.me.commands.CoordsCommand;
+import ssno.me.cooldown.Cooldown;
 import ssno.me.events.onPlayerDeath;
 
 import java.io.BufferedWriter;
@@ -21,6 +23,7 @@ public final class Me extends JavaPlugin {
          final String prefix = "§7[§bCoords§7] ";
 
         getServer().getPluginManager().registerEvents(new onPlayerDeath(), this);
+        Cooldown.setupcds();
         getCommand("coords").setExecutor(new CoordsCommand());
         getCommand("enabletp").setExecutor(new AdminCommands());
         getCommand("disabletp").setExecutor(new AdminCommands());
